@@ -16,7 +16,7 @@
                 <span class="heading-primary--sub">Full-Stack Engineer</span>
             </h1>
 
-            <a href="#projects" class="btn btn--white btn--animated smooth-goto">See Portfolio</a>
+            <a href="#projects" id="scroll" class="btn btn--white btn--animated smooth-goto">See Portfolio</a>
         </div>
     </header>
 
@@ -394,12 +394,12 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 <script>
-    $('.smooth-goto').on('click', function () {
-            $('html, body').animate({
-                scrollTop: $(this.hash).offset().top + 50
-            }, 1500);
-        });
-    
+    $("#scroll").click(function() {
+        $('html,body').animate({
+            scrollTop: $("#projects").offset().top},
+            2000);
+    });
+
     function openForm() {
         $("#myForm").toggle(1000);
     }
