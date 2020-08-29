@@ -25,6 +25,8 @@ html {
     html {
       font-size: 75%; } }
 
+    html {-webkit-text-size-adjust: none;}
+
 body {
   box-sizing: border-box;
   padding: 3rem; }
@@ -675,7 +677,7 @@ body {
         
         /* Add styles to the form container */
         .form-container {
-          max-width: 400px;
+          max-width: 500px;
           padding: 30px;
           background-color: #0e161b;
           opacity: 0.96;
@@ -703,7 +705,7 @@ body {
         textarea {
           width: 100%;
           color: #f1f1f1;
-          background-color: #070b0e;
+          background-color: #0e161b;
           border-bottom:  2px solid #f1f1f1;
           margin-bottom: 2rem;
           border-top: none;
@@ -713,7 +715,7 @@ body {
         }
         
         /* When the inputs get focus, do something */
-        .form-container input[type=text]:focus, .form-container textarea[type=msg]:focus {
+        .form-container input[type=text]:focus, .form-container textarea:focus {
           background-color: #0e161b;
           color: #f1f1f1;
           outline: none;
