@@ -416,13 +416,13 @@ body {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); }
     .card__picture--1 {
-      background-image: url(../images/quiz.jpg); }
+      background-image: url(./images/quiz.jpg); }
     .card__picture--2 {
-      background-image: url(../images/twitter2.jpg), linear-gradient(to right bottom, #104a57, #15222A); }
+      background-image: url(./images/twitter2.jpg), linear-gradient(to right bottom, #104a57, #15222A); }
     .card__picture--3 {
       background-image: linear-gradient(to right bottom, #717182, #15222A); }
     .card__picture--4 {
-      background-image: url(../images/plan.jpg); }
+      background-image: url(./images/plan.jpg); }
     .card__picture--5 {
       background-image: linear-gradient(to right bottom, #717182, #15222A); }
     .card__picture--6 {
@@ -553,7 +553,7 @@ body {
         
 .header {
   height: 95vh;
-  background-image: url(../images/header.jpg);
+  background-image: url(./images/header.jpg);
   background-size: cover;
   background-position: top;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 70vh, 0 100%);
@@ -668,7 +668,7 @@ body {
         .form-popup {
           display: none;
           position: fixed;
-          left: 4px;
+          left: 0rem;
           bottom: 4px;
           z-index: 9;
         }
@@ -687,7 +687,7 @@ body {
         }
         
         /* Full-width input fields */
-        .form-container input[type=text], .form-container input[type=message] {
+        .form-container input[type=text], .form-container input[type=textarea] {
           width: 100%;
           color: #f1f1f1;
           font-family: "Lato", sans-serif;
@@ -699,9 +699,21 @@ body {
           border-right: none;
           background: #0e161b;
         }
+
+        textarea {
+          width: 100%;
+          color: #f1f1f1;
+          background-color: #070b0e;
+          border-bottom:  2px solid #f1f1f1;
+          margin-bottom: 2rem;
+          border-top: none;
+          border-left: none;
+          border-right: none;
+          font-family: "Lato", sans-serif;
+        }
         
         /* When the inputs get focus, do something */
-        .form-container input[type=text]:focus, .form-container input[type=message]:focus {
+        .form-container input[type=text]:focus, .form-container textarea[type=msg]:focus {
           background-color: #0e161b;
           color: #f1f1f1;
           outline: none;
