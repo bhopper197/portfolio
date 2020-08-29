@@ -25,7 +25,8 @@ html {
     html {
       font-size: 75%; } }
 
-    html {-webkit-text-size-adjust: none;}
+    body { font-size: 16px; }
+    input, select { font-size: 100%; }
 
 body {
   box-sizing: border-box;
