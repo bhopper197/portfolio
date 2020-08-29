@@ -683,12 +683,14 @@ body {
         }
         .email-form {
           color: #f1f1f1;
+          font-family: "Lato", sans-serif;
         }
         
         /* Full-width input fields */
         .form-container input[type=text], .form-container input[type=message] {
           width: 100%;
           color: #f1f1f1;
+          font-family: "Lato", sans-serif;
           padding: 15px;
           margin: 5px 0 22px 0;
           border-bottom: 2px solid #f1f1f1;
