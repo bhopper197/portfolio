@@ -116,6 +116,9 @@ body {
   @media (max-width: 56.25em) {
     .heading-secondary {
       font-size: 3rem; } }
+  @media (max-width: 1024px){
+    .heading-secondary{
+      margin-top: 20rem; } }
   @media (max-width: 37.5em) {
     .heading-secondary {
       font-size: 2.5rem; } }
@@ -377,7 +380,7 @@ body {
     color: #fff;
     font-size: 2rem;
     height: 30rem;
-    transition: all .8s ease;
+    transition: all .7s ease;
     position: absolute;
     top: 0;
     left: 0;
@@ -428,7 +431,8 @@ body {
     .card__picture--6 {
       background-image: linear-gradient(to right bottom, #717182, #15222A); }
   .card__heading {
-    font-size: 2.8rem;
+    font-size: 2.2rem;
+    letter-spacing: 2px;
     font-weight: 400;
     text-transform: uppercase;
     text-align: right;
@@ -436,7 +440,7 @@ body {
     position: absolute;
     top: 2rem;
     right: 2rem;
-    width: 70%;
+    width: 93%;
     line-height: 3.5rem; }
   .card__heading-span--1 {
     background-color: #3C3D7C;
@@ -534,11 +538,11 @@ body {
         position: relative;
         box-shadow: none; }
         .card__side--back {
-          transform: rotateY(0);
+          transform: rotateZ(0);
           clip-path: polygon(0 7%, 100% 0, 100% 100%, 0 100%); }
       .card:hover .card__side--front {
         cursor: pointer;
-        transform: rotateY(0); }
+        transform: rotateZ(0); }
       .card .card__details {
         padding: 1rem 3rem; }
       .card__cta {
@@ -570,7 +574,7 @@ body {
     transform: translate(-50%, -50%); }
 
 .row {
-  max-width: 95rem;
+  max-width: 105rem;
   margin: 0 auto; }
   .row:not(:last-child) {
     margin-bottom: 4rem; }
@@ -579,7 +583,7 @@ body {
         margin-bottom: 0; } }
   @media (max-width: 56.25em) {
     .row {
-      max-width: 50rem; } }
+      max-width: 60rem; } }
   .row::after {
     content: "";
     display: table;
@@ -610,7 +614,7 @@ body {
 
 .footer {
   background-color: #15222A;
-  padding: 2rem 0;
+  padding: 3rem;
   font-size: 1.5rem; }
   @media (max-width: 56.25em) {
     .footer {
@@ -620,7 +624,7 @@ body {
     margin-bottom: 2rem; }
   .footer__logo {
     border-radius: 50%;
-    width: 94px;
+    width: 11rem;
     padding: 1rem;
     height: auto;
     transition: all .3s; }
@@ -629,7 +633,7 @@ body {
       transform: scale(1.6); }
   .footer__navigation {
     border: 1.5px solid #f1f1f1;
-
+    font-size: 14px;
     padding: 3.4rem;
     color: #f1f1f1;
     display: inline-block; }
@@ -642,7 +646,7 @@ body {
   }
   .footer__link:link, .footer__link:visited {
     color: #f1f1f1;
-    font-size: 12px;
+    font-size: 14px;
     text-decoration: none;
     text-transform: uppercase;
     display: inline-block;
@@ -691,6 +695,8 @@ body {
           width: 100%;
           color: #f1f1f1;
           font-family: "Lato", sans-serif;
+          letter-spacing: 1px;
+          font-size: 16px;
           padding: 15px;
           margin: 5px 0 22px 0;
           border-bottom: 2px solid #f1f1f1;
@@ -710,14 +716,18 @@ body {
           border-left: none;
           border-right: none;
           font-family: "Lato", sans-serif;
+          letter-spacing: 1px;
+          font-size: 16px;
         }
         
         /* When the inputs get focus, do something */
-        .form-container input[type=text]:focus, .form-container textarea:focus {
+        .form-container input[type=text]:focus, .form-container textarea[type=text]:focus {
           background-color: #0e161b;
           color: #f1f1f1;
           outline: none;
         }
+        ::placeholder{ color: #f1f1f1bb; font-size: 14px; }
+        textarea::placeholder { color: #f1f1f1bb; text-indent: 1.7rem; }
         
         /* Set a style for the submit/login button */
         .form-container .btn {
@@ -742,7 +752,7 @@ body {
           transform: translateY(-0.8rem);
           box-shadow: 0 3rem 4rem rgba(0, 0, 0, 0.21); }
 
-          /*** iPhone and iOS Form Input Zoom Fixes ***/
+          /* ** iPhone and iOS Form Input Zoom Fixes ** */
 /* Fix Input Zoom on devices older than iPhone 5: */
 @media screen and (device-aspect-ratio: 2/3) {
   select, textarea, input[type="text"], input[type="password"],
@@ -754,7 +764,6 @@ body {
 /* Fix Input Zoom on iPhone 5, 5C, 5S, iPod Touch 5g */
 @media screen and (device-aspect-ratio: 40/71) {
   select, textarea, input[type="text"], input[type="password"],
-  input[type="datetime"], input[type="datetime-local"],
   input[type="date"], input[type="month"], input[type="time"],
   input[type="week"], input[type="number"], input[type="email"],
   input[type="url"]{ font-size: 16px; }
@@ -763,7 +772,6 @@ body {
 /* Fix Input Zoom on iPhone 6, iPhone 6s, iPhone 7  */
 @media screen and (device-aspect-ratio: 375/667) {
   select, textarea, input[type="text"], input[type="password"],
-  input[type="datetime"], input[type="datetime-local"],
   input[type="date"], input[type="month"], input[type="time"],
   input[type="week"], input[type="number"], input[type="email"], 
   input[type="tel"], input[type="url"]{ font-size: 16px; }
@@ -772,7 +780,6 @@ body {
 /* Fix Input Zoom on iPhone 6 Plus, iPhone 6s Plus, iPhone 7 Plus, iPhone 8, iPhone X, XS, XS Max  */
 @media screen and (device-aspect-ratio: 9/16) {
   select, textarea, input[type="text"], input[type="password"],
-  input[type="datetime"], input[type="datetime-local"],
   input[type="date"], input[type="month"], input[type="time"],
   input[type="week"], input[type="number"], input[type="email"],
   input[type="tel"], input[type="url"]{ font-size: 16px; }}
