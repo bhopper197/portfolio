@@ -379,11 +379,11 @@
         <form action="https://formspree.io/mqkyykoe" method="POST" class="form-container">
             <h1 class="email-form">Get in Touch</h1>
 
-            <input type="text" placeholder="Your Name" name="name" required>
+            <input type="text" placeholder="Name" name="name" required>
 
-            <input type="text" placeholder="Enter Email" name="email" required>
+            <input type="text" placeholder="Email" name="email" required>
 
-            <textarea placeholder="Your message" name="msg" id="" rows="5"></textarea>
+            <textarea type="text" placeholder="Message" name="msg" id="" rows="4"></textarea>
 
             <button type="submit" class="btn btn--white btn--animated">Send</button>
             <button type="button" class="btn cancel btn--white btn--animated" onclick="closeForm()">Close</button>
@@ -398,15 +398,15 @@
     $("#scroll").click(function() {
         $('html,body').animate({
             scrollTop: $("#projects").offset().top},
-            2000);
+            1500);
     });
 
     function openForm() {
-        $("#myForm").toggle(1000);
+        $("#myForm").toggle(500);
     }
           
     function closeForm() {
-        $("#myForm").toggle(1000);
+        $("#myForm").toggle(500);
     }
 </script>
 
